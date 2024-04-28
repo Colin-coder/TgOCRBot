@@ -1,0 +1,9 @@
+images
+venv
+*.jpg
+docker-compose.yaml
+Dockerfile
+.env
+LICENSE
+pyproject.toml
+README.md
