@@ -24,7 +24,7 @@ def do_ocr(img_path):
 
 async def download_pic(update: Update):
     photo_file = await update.message.photo[-1].get_file()
-    pic_name = f'abc.jpg'
+    pic_name = f'./cache/abc.jpg'
     await photo_file.download_to_drive(pic_name)
     return pic_name
 
@@ -96,7 +96,7 @@ def main() -> None:
     # on different commands - answer in Telegram
     application.add_handler(CommandHandler(["start", "help"], start))
     application.add_handler(MessageHandler(filters.PHOTO, get_pic_ocr_texts))
-    
+
     # Run the bot until the user presses Ctrl-C
     application.run_polling(allowed_updates=Update.ALL_TYPES)
 

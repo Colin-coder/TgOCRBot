@@ -1,5 +1,5 @@
 venv
-*.jpg
+cache
 docker-compose.yaml
 Dockerfile
 .env
